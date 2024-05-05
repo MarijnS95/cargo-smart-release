@@ -481,7 +481,7 @@ fn wait_for_release(
     if skip_publish || dry_run || dry_run_cargo_publish {
         return Ok(());
     }
-    let timeout = std::time::Duration::from_secs(60);
+    let timeout = std::time::Duration::from_secs(2);
     let start = std::time::Instant::now();
     let sleep_time = std::time::Duration::from_secs(1);
     let crate_version = crate_version.to_string();
